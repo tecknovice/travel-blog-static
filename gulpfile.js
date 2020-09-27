@@ -5,24 +5,7 @@ const source = path.join('static', 'temp', 'images', '*')
 const dest = path.join('static', 'images')
 const globby = require('globby')
 const del = require('del')
-const debug = require('debug')('travel-blog-gulp:*')
-
-// Array.prototype.diff = function (a) {
-//     return this.filter(function (i) { return a.indexOf(i) < 0; });
-// };
-
-// async function imageclean() {
-
-//     let sourceFiles = await globby(source)
-//     sourceFiles = sourceFiles.map(file => file.match(/[^/]+$/)[0])
-//     let destFiles = await globby(dest)
-//     destFiles = destFiles.map(file => file.match(/[^/]+$/)[0])
-
-//     let deleteFiles = destFiles.diff(sourceFiles)
-//     deleteFiles = deleteFiles.map(file => path.join(dest, file))
-//     const deletedPaths = await del(deleteFiles)
-
-// }
+const debug = require('debug')('travel-blog-static:*')
 
 async function imageclean() {
     let deleteFiles = await globby(source)
