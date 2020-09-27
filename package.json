@@ -1,0 +1,23 @@
+{
+  "name": "travel-blog-static",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "gulp": "gulp --gulpfile gulpfile.js",
+    "start": "env-cmd -f ./config.env node app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "debug": "^4.2.0",
+    "del": "^6.0.0",
+    "globby": "^11.0.1",
+    "gulp": "^4.0.2",
+    "gulp-imagemin": "^7.1.0",
+    "static-server": "^2.2.1"
+  },
+  "devDependencies": {
+    "env-cmd": "^10.1.0"
+  }
+}
