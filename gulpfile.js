@@ -6,7 +6,8 @@ const dest = path.join(__dirname, 'static', 'images')
 const globby = require('globby')
 const del = require('del')
 const debug = require('debug')('travel-blog-gulp:*')
-
+debug('source', source)
+debug('dest', dest)
 async function imageclean() {
     let deleteFiles = await globby(source)
     debug('deleteFiles', deleteFiles)
