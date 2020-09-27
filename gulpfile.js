@@ -16,15 +16,10 @@ async function imageclean() {
 function imageminify() {
     return gulp.src(source)
         .pipe(imagemin([
-            // imagemin.gifsicle({interlaced: true}),
-            imagemin.mozjpeg({ quality: 75, progressive: true }),
-            imagemin.optipng({ optimizationLevel: 5 }),
-            imagemin.svgo({
-                plugins: [
-                    { removeViewBox: true },
-                    { cleanupIDs: false }
-                ]
-            })
+            // imagemin.gifsicle(),
+            imagemin.mozjpeg(),
+            imagemin.optipng(),
+            imagemin.svgo()
         ]))
         .pipe(gulp.dest(dest));
 }
