@@ -1,8 +1,8 @@
 const path = require('path');
 const mozjpeg = require('imagemin-mozjpeg');
 const debug = require('debug')('travel-blog-admin:grunt')
-const source = path.join(__dirname, 'public', 'temp', 'images', '/')
-const dest = path.join(__dirname, 'public', 'images', '/')
+const source = path.join(__dirname, 'static', 'temp', 'images', '/')
+const dest = path.join(__dirname, 'static', 'images', '/')
 const files = source + '*.{png,jpg,jpeg,gif}'
 module.exports = function (grunt) {
 

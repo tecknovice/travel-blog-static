@@ -1,11 +1,11 @@
 const path = require('path')
 const gulp = require('gulp')
 const imagemin = require('gulp-imagemin')
-const source = path.join('static', 'temp', 'images', '*')
-const dest = path.join('static', 'images')
+const source = path.join(__dirname, 'static', 'temp', 'images', '*')
+const dest = path.join(__dirname, 'static', 'images')
 const globby = require('globby')
 const del = require('del')
-const debug = require('debug')('travel-blog-static:*')
+const debug = require('debug')('travel-blog-gulp:*')
 
 async function imageclean() {
     let deleteFiles = await globby(source)
